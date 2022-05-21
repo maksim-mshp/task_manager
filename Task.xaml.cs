@@ -24,5 +24,20 @@ namespace TaskManager
         {
             InitializeComponent();
         }
+
+        private void delete_task_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void task_name_Unchecked(object sender, RoutedEventArgs e)
+        {
+            tbx.TextDecorations = null;
+        }
+
+        private void checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            tbx.TextDecorations = TextDecorations.Strikethrough;
+        }
     }
 }

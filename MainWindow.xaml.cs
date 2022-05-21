@@ -24,5 +24,10 @@ namespace TaskManager
         {
             InitializeComponent();
         }
+
+        private void Task_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

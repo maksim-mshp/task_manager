@@ -4,10 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaskManager"
-             mc:Ignorable="d" Height="41.648" Width="365.237">
+             mc:Ignorable="d" Height="17.648" Width="365.237">
     <Grid Background="White">
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="35,12,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center"/>
-        <Image HorizontalAlignment="Left" Height="24" Margin="12,14,0,0" VerticalAlignment="Top" Width="18" Source="delete.png"/>
+        <CheckBox x:Name="checkbox" Content="" HorizontalAlignment="Left" Margin="35,-2,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center" Unchecked="task_name_Unchecked" Checked="checkbox_Checked"/>
+        <Image x:Name="delete_task" HorizontalAlignment="Left" Height="24" Margin="12,0,0,0" VerticalAlignment="Top" Width="18" Source="delete.png" MouseDown="delete_task_MouseDown"/>
+        <TextBlock x:Name="tbx" HorizontalAlignment="Left" Margin="58,-3,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
 
     </Grid>
 </UserControl>
