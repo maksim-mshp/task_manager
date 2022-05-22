@@ -36,11 +36,20 @@ namespace TaskManager
         private void task_name_Unchecked(object sender, RoutedEventArgs e)
         {
             name.TextDecorations = null;
+            if (mainwindow.is_inited == true)
+            {
+                mainwindow.write_tasks();
+            }
+        
         }
 
         private void checkbox_Checked(object sender, RoutedEventArgs e)
         {
             name.TextDecorations = TextDecorations.Strikethrough;
+            if (mainwindow.is_inited == true)
+            {
+                mainwindow.write_tasks();
+            }
         }
 
 

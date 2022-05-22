@@ -22,6 +22,7 @@ namespace TaskManager {
     public partial class MainWindow: Window {
 
         public int id_counter = 1;
+        public bool is_inited = false;
         List < Task > tasks = new List < Task > ();
         public MainWindow() {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace TaskManager {
                     tasks.RemoveAt(i);
                 }
             }
+            write_tasks();
         }
 
         public void add_task(string title, bool isdone = false) {
@@ -46,12 +48,17 @@ namespace TaskManager {
             id_counter++;
             listbox.Items.Add(task);
             tasks.Add(task);
-            write_tasks();
+            if (is_inited == true)
+            {
+                write_tasks();
+            }
+                
         }
 
         public void clear_tasks() {
             tasks.Clear();
             listbox.Items.Clear();
+            write_tasks();
         }
 
         private void add_Click(object sender, RoutedEventArgs e) {
@@ -85,11 +92,19 @@ namespace TaskManager {
                     int len = Convert.ToInt32(sr.ReadLine());
                     for (int i = 0; i < len; i++) {
                         string line = sr.ReadLine();
-                        add_task(line.Remove(0, 1), line[0] == '1');
+                        bool fl = false;
+                        if (line[0] == '1')
+                        {
+                            fl = true;
+                        }
+                        add_task(line.Remove(0, 1), fl);
                     }
                     sr.Close();
+                    is_inited = true;
                 }
+                write_tasks();
             }
+
         }
 
         private void clear_btn_Click(object sender, RoutedEventArgs e) {
