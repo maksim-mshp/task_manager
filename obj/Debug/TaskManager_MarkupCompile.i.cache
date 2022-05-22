@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Maksim\C#\TaskManager\App.xaml
-21704515084
+3-1685754049
 
-72026968498
+81337933594
 13-1505183044
-MainWindow.xaml;Task.xaml;
+AddTaskWindow.xaml;MainWindow.xaml;Task.xaml;
 
-False
+True
 

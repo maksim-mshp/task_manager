@@ -20,6 +20,9 @@ namespace TaskManager
     /// </summary>
     public partial class Task : UserControl
     {
+        public int id = 0;
+        public MainWindow mainwindow;
+
         public Task()
         {
             InitializeComponent();
@@ -27,17 +30,31 @@ namespace TaskManager
 
         private void delete_task_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            mainwindow.remove_task(id);
         }
 
         private void task_name_Unchecked(object sender, RoutedEventArgs e)
         {
-            tbx.TextDecorations = null;
+            name.TextDecorations = null;
         }
 
         private void checkbox_Checked(object sender, RoutedEventArgs e)
         {
-            tbx.TextDecorations = TextDecorations.Strikethrough;
+            name.TextDecorations = TextDecorations.Strikethrough;
+        }
+
+
+        private void name_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (checkbox.IsChecked == true)
+            {
+                checkbox.IsChecked = false;
+                name.TextDecorations = null;
+            } else
+            {
+                checkbox.IsChecked = true;
+                name.TextDecorations = TextDecorations.Strikethrough;
+            }
         }
     }
 }

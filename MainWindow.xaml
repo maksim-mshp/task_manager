@@ -8,10 +8,8 @@
         Title="Менеджер задач" Height="450" Width="800">
     <Grid>
         <Label Content="Менеджер задач" HorizontalAlignment="Left" Margin="0,10,-0.4,0" VerticalAlignment="Top" Width="794" FontSize="18" HorizontalContentAlignment="Center"/>
-        <ListBox HorizontalAlignment="Left" Height="170" Margin="34,71,0,0" VerticalAlignment="Top" Width="735" BorderBrush="{x:Null}">
-            <local:Task/>
-            <local:Task/>
-        </ListBox>
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="288" Margin="10,71,0,0" VerticalAlignment="Top" Width="772" BorderBrush="{x:Null}"/>
+        <Button x:Name="add" Content="Добавить задачу" HorizontalAlignment="Left" Margin="23,374,0,0" VerticalAlignment="Top" Width="182" Click="add_Click"/>
 
     </Grid>
 </Window>

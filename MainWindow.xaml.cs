@@ -15,19 +15,52 @@ using System.Windows.Shapes;
 
 namespace TaskManager
 {
+
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public int id_counter = 1;
+        List<Task> tasks = new List<Task>();
         public MainWindow()
         {
             InitializeComponent();
+            add_task("first task");
         }
 
-        private void Task_Loaded(object sender, RoutedEventArgs e)
+        public void remove_task(int task_id)
         {
+            for (int i = 0; i < tasks.Count; i++)
+            {
+                if (tasks[i].id == task_id)
+                {
+                    listbox.Items.Remove(tasks[i]);
+                    tasks.RemoveAt(i);
+                }
+            }
+        }
 
+        public void add_task(string title)
+        {
+            Task task = new Task();
+            task.name.Text = title;
+            task.id = id_counter;
+            task.mainwindow = this;
+            id_counter++;
+            listbox.Items.Add(task);
+            tasks.Add(task);
+        }
+
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            AddTaskWindow window = new AddTaskWindow();
+            window.mainwindow = this;
+            window.Topmost = true;
+            window.Show();
         }
     }
+
+
 }
