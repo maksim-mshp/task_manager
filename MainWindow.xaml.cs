@@ -142,5 +142,16 @@ namespace TaskManager {
             window.Topmost = true;
             window.Show();
         }
+
+        private void MyWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyboardDevice.Modifiers == (ModifierKeys.Control) && e.Key == Key.N)
+            {
+                AddTaskWindow window = new AddTaskWindow();
+                window.mainwindow = this;
+                window.Topmost = true;
+                window.Show();
+            }
+        }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TaskManager"
         mc:Ignorable="d"
         x:Name="MyWindow"
-        Title="Менеджер задач" Height="461.2" Width="800">
+        Title="Менеджер задач" Height="461.2" Width="800" KeyDown="MyWindow_KeyDown">
     <Grid Margin="0,0,-0.4,0">
         <Menu Margin="0,0,0,397.2">
             <MenuItem Header="Задачи" Height="33" Width="53">

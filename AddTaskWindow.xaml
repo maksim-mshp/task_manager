@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskManager"
         mc:Ignorable="d"
-        Title="Добавить задачу" Height="145" Width="604">
+        Title="Добавить задачу" Height="145" Width="604" KeyDown="Window_KeyDown">
     <Grid>
         <TextBox x:Name="task_name" HorizontalAlignment="Left" Height="31" Margin="170,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398" FontSize="16"/>
         <Label Content="Название задачи:" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" FontSize="16"/>
