@@ -16,6 +16,9 @@
             <MenuItem Header="Рандом" Height="33" Width="53">
                 <Button Content="Добавить рандомную задачу" Click="add_rand_btn_Click" Width="182" Height="23"/>
             </MenuItem>
+            <MenuItem Header="Другое" Height="33" Width="53">
+                <Button x:Name="about_btn" Content="О программе" Click="about_btn_Click" Width="126" Height="23"/>
+            </MenuItem>
         </Menu>
         <Label Content="Менеджер задач" HorizontalAlignment="Left" Margin="0,39,0,0" VerticalAlignment="Top" Width="794" FontSize="18" HorizontalContentAlignment="Center"/>
         <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="288" Margin="10,81,0,0" VerticalAlignment="Top" Width="772" BorderBrush="{x:Null}"/>

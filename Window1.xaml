@@ -1,0 +1,35 @@
+﻿<Window x:Class="TaskManager.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManager"
+        mc:Ignorable="d"
+        Title="О программе" Height="277" Width="467">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="118,10,0,0" TextWrapping="Wrap" Text="Менеджер задач v1.0" VerticalAlignment="Top" Height="30" Width="238" FontSize="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,54,0,0" TextWrapping="Wrap" Text="Чернышков Максим, М405" VerticalAlignment="Top" Height="23" Width="192" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Center" Margin="154,217,143,10" TextWrapping="Wrap" Text="г. Мытищи, 2022" VerticalAlignment="Center" Height="21" Width="164" TextAlignment="Center" FontSize="14"/>
+        <TextBlock Margin="19,73,44,139" FontSize="14">           
+            <Hyperlink NavigateUri="https://github.com/maksim-mshp/task_manager" RequestNavigate="Hyperlink_RequestNavigate">
+                GitHub проекта
+            </Hyperlink>
+        </TextBlock>
+        <TextBlock Margin="19,132,44,80" FontSize="14">           
+            <Hyperlink NavigateUri="https://vk.com/maksim.mshp" RequestNavigate="Hyperlink_RequestNavigate">
+                ВКонтакте
+            </Hyperlink>
+        </TextBlock>
+        <TextBlock Margin="19,150,44,62" FontSize="14">           
+            <Hyperlink NavigateUri="https://t.me/maksim_mshp" RequestNavigate="Hyperlink_RequestNavigate">
+                Telegram
+            </Hyperlink>
+        </TextBlock>
+        <TextBlock Margin="19,168,44,44" FontSize="14">           
+            <Hyperlink NavigateUri="https://github.com/maksim-mshp" RequestNavigate="Hyperlink_RequestNavigate">
+                GitHub
+            </Hyperlink>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="19,109,0,0" TextWrapping="Wrap" Text="Социальные сети" VerticalAlignment="Top" Height="23" Width="192" FontSize="14"/>
+    </Grid>
+</Window>

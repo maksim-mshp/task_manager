@@ -17,3 +17,5 @@ D:\Maksim\C#\TaskManager\obj\Debug\TaskManager.exe
 D:\Maksim\C#\TaskManager\obj\Debug\TaskManager.pdb
 D:\Maksim\C#\TaskManager\obj\Debug\AddTaskWindow.g.cs
 D:\Maksim\C#\TaskManager\obj\Debug\AddTaskWindow.baml
+D:\Maksim\C#\TaskManager\obj\Debug\Window1.g.cs
+D:\Maksim\C#\TaskManager\obj\Debug\Window1.baml

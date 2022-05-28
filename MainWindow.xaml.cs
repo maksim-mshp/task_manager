@@ -135,5 +135,12 @@ namespace TaskManager {
         {
             clear_tasks();
         }
+
+        private void about_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 window = new Window1();
+            window.Topmost = true;
+            window.Show();
+        }
     }
 }
