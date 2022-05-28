@@ -64,6 +64,10 @@ namespace TaskManager
                 checkbox.IsChecked = true;
                 name.TextDecorations = TextDecorations.Strikethrough;
             }
+            if (mainwindow.is_inited == true)
+            {
+                mainwindow.write_tasks();
+            }
         }
 
         public void make_done()
@@ -77,6 +81,10 @@ namespace TaskManager
             {
                 checkbox.IsChecked = true;
                 name.TextDecorations = TextDecorations.Strikethrough;
+            }
+            if (mainwindow.is_inited == true)
+            {
+                mainwindow.write_tasks();
             }
         }
     }

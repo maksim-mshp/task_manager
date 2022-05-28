@@ -156,59 +156,59 @@ namespace TaskManager {
                 add_task(name);
             }
             if (e.Key == Key.D1 || e.Key == Key.NumPad1) {
-                tasks[0].make_done();
+                if (tasks.Count > 0) tasks[0].make_done();
             }
             if (e.Key == Key.D2 || e.Key == Key.NumPad2) {
-                tasks[1].make_done();
+                if (tasks.Count > 1) tasks[1].make_done();
             }
             if (e.Key == Key.D3 || e.Key == Key.NumPad3) {
-                tasks[2].make_done();
+                if (tasks.Count > 2) tasks[2].make_done();
             }
             if (e.Key == Key.D4 || e.Key == Key.NumPad4) {
-                tasks[3].make_done();
+                if (tasks.Count > 3) tasks[3].make_done();
             }
             if (e.Key == Key.D5 || e.Key == Key.NumPad5) {
-                tasks[4].make_done();
+                if (tasks.Count > 4) tasks[4].make_done();
             }
             if (e.Key == Key.D6 || e.Key == Key.NumPad6) {
-                tasks[5].make_done();
+                if (tasks.Count > 5) tasks[5].make_done();
             }
             if (e.Key == Key.D7 || e.Key == Key.NumPad7) {
-                tasks[6].make_done();
+                if (tasks.Count > 6) tasks[6].make_done();
             }
             if (e.Key == Key.D8 || e.Key == Key.NumPad8) {
-                tasks[7].make_done();
+                if (tasks.Count > 7) tasks[7].make_done();
             }
             if (e.Key == Key.D9 || e.Key == Key.NumPad9) {
-                tasks[8].make_done();
+                if (tasks.Count > 8) tasks[8].make_done();
             }
 
             if (e.KeyboardDevice.Modifiers == (ModifierKeys.Shift) && e.Key == Key.D1 || e.Key == Key.NumPad1) {
-                remove_task(tasks[0].id);
+                if (tasks.Count > 0) remove_task(tasks[0].id);
             }
             if (e.KeyboardDevice.Modifiers == (ModifierKeys.Shift) && e.Key == Key.D2 || e.Key == Key.NumPad2) {
-                remove_task(tasks[1].id);
+                if (tasks.Count > 1) remove_task(tasks[1].id);
             }
             if (e.KeyboardDevice.Modifiers == (ModifierKeys.Shift) && e.Key == Key.D3 || e.Key == Key.NumPad3) {
-                remove_task(tasks[2].id);
+                if (tasks.Count > 2) remove_task(tasks[2].id);
             }
             if (e.KeyboardDevice.Modifiers == (ModifierKeys.Shift) && e.Key == Key.D4 || e.Key == Key.NumPad4) {
-                remove_task(tasks[3].id);
+                if (tasks.Count > 3) remove_task(tasks[3].id);
             }
             if (e.KeyboardDevice.Modifiers == (ModifierKeys.Shift) && e.Key == Key.D5 || e.Key == Key.NumPad5) {
-                remove_task(tasks[4].id);
+                if (tasks.Count > 4) remove_task(tasks[4].id);
             }
             if (e.KeyboardDevice.Modifiers == (ModifierKeys.Shift) && e.Key == Key.D6 || e.Key == Key.NumPad6) {
-                remove_task(tasks[5].id);
+                if (tasks.Count > 5) remove_task(tasks[5].id);
             }
             if (e.KeyboardDevice.Modifiers == (ModifierKeys.Shift) && e.Key == Key.D7 || e.Key == Key.NumPad7) {
-                remove_task(tasks[6].id);
+                if (tasks.Count > 6) remove_task(tasks[6].id);
             }
             if (e.KeyboardDevice.Modifiers == (ModifierKeys.Shift) && e.Key == Key.D8 || e.Key == Key.NumPad8) {
-                remove_task(tasks[7].id);
+                if (tasks.Count > 7) remove_task(tasks[7].id);
             }
             if (e.KeyboardDevice.Modifiers == (ModifierKeys.Shift) && e.Key == Key.D9 || e.Key == Key.NumPad9) {
-                remove_task(tasks[8].id);
+                if (tasks.Count > 8) remove_task(tasks[8].id);
             }
         }
     }
