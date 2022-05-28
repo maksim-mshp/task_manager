@@ -24,8 +24,12 @@ namespace TaskManager {
         public int id_counter = 1;
         public bool is_inited = false;
         List < Task > tasks = new List < Task > ();
+        public static RoutedCommand MyCommand = new RoutedCommand();
+
         public MainWindow() {
             InitializeComponent();
+            MyCommand.InputGestures.Add(new KeyGesture(Key.N, ModifierKeys.Control));
+
             read_tasks();
         }
 
@@ -120,6 +124,16 @@ namespace TaskManager {
                 name += chars[rand.Next(0, chars.Length)];
             }
             add_task(name);
+        }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void clearall_Click(object sender, RoutedEventArgs e)
+        {
+            clear_tasks();
         }
     }
 }

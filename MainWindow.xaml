@@ -5,13 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskManager"
         mc:Ignorable="d"
-        Title="Менеджер задач" Height="450" Width="800">
-    <Grid>
-        <Label Content="Менеджер задач" HorizontalAlignment="Left" Margin="0,10,-0.4,0" VerticalAlignment="Top" Width="794" FontSize="18" HorizontalContentAlignment="Center"/>
-        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="288" Margin="10,71,0,0" VerticalAlignment="Top" Width="772" BorderBrush="{x:Null}"/>
-        <Button x:Name="add" Content="Добавить задачу" HorizontalAlignment="Left" Margin="23,374,0,0" VerticalAlignment="Top" Width="114" Click="add_Click"/>
-        <Button x:Name="clear_btn" Content="Удалить все задачи" HorizontalAlignment="Left" Margin="150,374,0,0" VerticalAlignment="Top" Width="128" Click="clear_btn_Click"/>
-        <Button x:Name="add_rand_btn" Content="add random" HorizontalAlignment="Left" Margin="308,374,0,0" VerticalAlignment="Top" Width="75" Click="add_rand_btn_Click"/>
+        x:Name="MyWindow"
+        Title="Менеджер задач" Height="461.2" Width="800">
+    <Grid Margin="0,0,-0.4,0">
+        <Menu Margin="0,0,0,397.2">
+            <MenuItem Header="Задачи" Height="33" Width="53">
+                <Button Content="Добавить задачу" Click="add_Click" Width="126" Height="23"/>
+                <Button x:Name="clearall" Content="Удалить все задачи" Click="clearall_Click" Width="126" Height="23"/>
+            </MenuItem>
+            <MenuItem Header="Рандом" Height="33" Width="53">
+                <Button Content="Добавить рандомную задачу" Click="add_rand_btn_Click" Width="182" Height="23"/>
+            </MenuItem>
+        </Menu>
+        <Label Content="Менеджер задач" HorizontalAlignment="Left" Margin="0,39,0,0" VerticalAlignment="Top" Width="794" FontSize="18" HorizontalContentAlignment="Center"/>
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="288" Margin="10,81,0,0" VerticalAlignment="Top" Width="772" BorderBrush="{x:Null}"/>
+        <Button x:Name="add" Content="Добавить задачу" HorizontalAlignment="Left" Margin="10,374,0,0" VerticalAlignment="Top" Width="166" Click="add_Click" Height="36"/>
+        <Button x:Name="exit" Content="Выход" HorizontalAlignment="Left" Margin="606,374,0,0" VerticalAlignment="Top" Width="166" Click="exit_Click" Height="36"/>
 
     </Grid>
 </Window>
