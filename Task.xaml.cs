@@ -65,5 +65,19 @@ namespace TaskManager
                 name.TextDecorations = TextDecorations.Strikethrough;
             }
         }
+
+        public void make_done()
+        {
+            if (checkbox.IsChecked == true)
+            {
+                checkbox.IsChecked = false;
+                name.TextDecorations = null;
+            }
+            else
+            {
+                checkbox.IsChecked = true;
+                name.TextDecorations = TextDecorations.Strikethrough;
+            }
+        }
     }
 }
